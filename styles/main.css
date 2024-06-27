@@ -1,0 +1,125 @@
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+}
+
+.nav-bar {
+  background: #336699;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-bar img {
+  height: 12vh;
+  width: auto;
+}
+.nav-bar nav {
+  text-align: right;
+}
+.nav-bar nav a {
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.nav-bar nav a:hover {
+  background-color: antiquewhite;
+}
+
+.short-introduction-section {
+  position: relative;
+}
+.short-introduction-section video {
+  filter: grayscale(100);
+  height: 88vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.short-introduction-section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.body-section .presentation-long-text {
+  width: 70%;
+  margin: 160px auto;
+  text-align: center;
+}
+.body-section .presentation-long-text h1 {
+  padding-bottom: 60px;
+  font-size: 32px;
+}
+.body-section .machines {
+  text-align: center;
+  text-decoration: none;
+}
+.body-section .machines h3 {
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+.body-section .machines ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.body-section .machines ul div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 25%;
+}
+.body-section .machines ul div a {
+  text-decoration: none;
+}
+.body-section .machines ul div li {
+  list-style-type: none;
+}
+.body-section .machines ul div img {
+  height: 200px;
+  width: auto;
+}
+.body-section .machines ul div img:hover {
+  scale: 1.2;
+  transition: ease-in-out 1.5s;
+  cursor: pointer;
+}
+.body-section .machines ul div img:not(:hover) {
+  scale: 1;
+  transition: ease-in-out 0.8s;
+}
+.body-section footer {
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  margin-top: 100px;
+  background-color: #336699;
+  color: white;
+}
+.body-section footer .footer-contact {
+  text-align: center;
+}
+.body-section footer .footer-contact p {
+  margin-bottom: 80px;
+}
+.body-section footer .footer-contact .left-th {
+  width: 50%;
+}
+.body-section footer .footer-contact .right-th {
+  width: 50%;
+}
+@media screen and (max-width: 1080px) {
+  .body-section .machines ul div {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .body-section .machines ul div {
+    flex-basis: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
