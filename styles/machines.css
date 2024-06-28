@@ -1,8 +1,17 @@
+@charset "UTF-8";
 * {
   width: 100%;
   margin: 0;
   padding: 0;
   scrollbar-width: thin;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
 }
 
 .nav-bar {
@@ -26,6 +35,10 @@
 }
 .nav-bar nav a:hover {
   background-color: antiquewhite;
+}
+
+.nav-mobile {
+  display: none; /* Alapértelmezetten rejtve van */
 }
 
 .machines-section {
@@ -91,4 +104,56 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .nav-bar {
+    visibility: hidden;
+  }
+  .logo-mobile {
+    display: flex;
+    height: 8vh;
+    width: auto;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+  }
+  .nav-mobile.active {
+    display: flex;
+    flex-direction: column;
+    background: #336699;
+    height: 60vh;
+    width: 250px;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 83px;
+    right: 0;
+    z-index: 30;
+  }
+  .nav-mobile.active a {
+    text-decoration: none;
+    margin: 25px 0;
+    color: white;
+    cursor: pointer;
+  }
+  header {
+    height: 12vh;
+    background: #336699;
+  }
+  header .hamburger-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    cursor: pointer;
+  }
+  .machines-section div {
+    flex-basis: 50%;
+  }
+  .machines-section div img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=machines.css.map */
