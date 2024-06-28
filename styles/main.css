@@ -93,6 +93,32 @@
   scale: 1;
   transition: ease-in-out 0.8s;
 }
+.body-section .colleagues {
+  text-align: center;
+  margin: auto;
+}
+.body-section .colleagues h2 {
+  margin: 60px 0;
+}
+.body-section .colleagues .profile {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.body-section .colleagues .profile img {
+  width: 50%;
+}
+.body-section .colleagues .profile div {
+  width: 50%;
+}
+.body-section .colleagues .profile div h1 {
+  margin-bottom: 30px;
+}
+.body-section .colleagues .profile div h3 {
+  justify-content: center;
+  width: 300px;
+  margin: auto;
+}
 .body-section footer {
   display: flex;
   align-items: center;
@@ -116,6 +142,15 @@
 @media screen and (max-width: 1080px) {
   .body-section .machines ul div {
     flex-basis: 50%;
+  }
+  .body-section .colleagues .profile {
+    flex-direction: column;
+  }
+  .body-section .colleagues .profile div h3 {
+    width: 100%;
+  }
+  .body-section .colleagues .left-title {
+    flex-direction: column-reverse;
   }
 }
 @media screen and (max-width: 690px) {
