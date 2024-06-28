@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="nav-bar">
-        <img src="../../assets/imgs/logo.png" alt="" />
+        <img src="../../assets/imgs/logo.png" alt="Logo" />
         <nav>
           <a href="../../index.html">Kezdőlap</a>
           <a href="./granulating-machines.html">Granulálógépek</a>
@@ -37,56 +37,92 @@
 
     <section class="machines-section">
       <div>
-        <img src="../../assets/imgs/others/granit-35-shredder.png" alt="" />
+        <img id="img1" src="../../assets/imgs/others/granit-35-shredder.png" alt="Gránit-35 morzsázógép" />
         <p>Gránit-35 morzsázógép</p>
       </div>
       <div>
-        <img src="../../assets/imgs/others/granit-90-shredder.png" alt="" />
+        <img id="img2" src="../../assets/imgs/others/granit-90-shredder.png" alt="Gránit-90 morzsázógép" />
         <p>Gránit-90 morzsázógép</p>
       </div>
       <div>
-        <img src="../../assets/imgs/others/granit-35-cooler.png" alt="" />
+        <img id="img3" src="../../assets/imgs/others/granit-35-cooler.png" alt="Gránit-35 takarmányhűtő" />
         <p>Gránit-35 takarmányhűtő</p>
       </div>
       <div>
-        <img src="../../assets/imgs/others/granit-90-cooler.png" alt="" />
+        <img id="img4" src="../../assets/imgs/others/granit-90-cooler.png" alt="Gránit-90 takarmányhűtő" />
         <p>Gránit-90 takarmányhűtő</p>
       </div>
       <div>
-        <img src="../../assets/imgs/others/vibroscreen.png" alt="" />
+        <img id="img5" src="../../assets/imgs/others/vibroscreen.png" alt="Vibroszita" />
         <p>Vibroszita</p>
       </div>
       <div>
-        <img src="../../assets/imgs/others/ventilator.png" alt="" />
+        <img id="img6" src="../../assets/imgs/others/ventilator.png" alt="Porelszívó ventillátor" />
         <p>Porelszívó ventillátor</p>
       </div>
     </section>
 
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Gránit-35 morzsázógép</p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Gránit-90 morzsázógép</p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Gránit-35 takarmányhűtő</p>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Gránit-90 takarmányhűtő</p>
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Vibroszita</p>
+      </div>
+    </div>
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Description for Porelszívó ventillátor</p>
+      </div>
+    </div>
+
     <script>
-      let modal = document.getElementById('myModal');
+      const images = document.querySelectorAll(".machines-section img");
+      const modals = document.querySelectorAll(".modal");
+      const closeButtons = document.querySelectorAll(".close");
 
-      // Get the button that opens the modal
-      let btn = document.getElementById('myBtn');
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          modals[index + 1].style.display = "block";
+        });
+      });
 
-      // Get the <span> element that closes the modal
-      let span = document.getElementsByClassName('close')[0];
+      closeButtons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          modals[index].style.display = "none";
+        });
+      });
 
-      // When the user clicks the button, open the modal
-      btn.onclick = function () {
-        modal.style.display = 'block';
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = 'none';
-      };
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = 'none';
-        }
-      };
+      window.addEventListener("click", (event) => {
+        modals.forEach((modal) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
     </script>
   </body>
 </html>
