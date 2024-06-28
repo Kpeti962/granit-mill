@@ -79,13 +79,16 @@
 }
 .body-section .machines ul {
   display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
   flex-wrap: wrap;
 }
 .body-section .machines ul div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 25%;
+  flex-basis: 35%;
 }
 .body-section .machines ul div a {
   text-decoration: none;
