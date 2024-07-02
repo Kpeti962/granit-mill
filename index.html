@@ -2,14 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/main.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="grayscale">
     <header>
       <img class="logo-mobile" src="../assets/imgs/logo.png" alt="" />
-      <img id="hamburgerOpen" class="hamburger-icon" src="./assets/imgs/icons/hamburger.png" alt="">
+      <img
+        id="hamburgerOpen"
+        class="hamburger-icon"
+        src="./assets/imgs/icons/hamburger.png"
+        alt=""
+      />
       <div class="nav-bar">
         <img class="logo" src="../assets/imgs/logo.png" alt="" />
         <nav>
@@ -25,7 +38,9 @@
       </div>
     </header>
 
+    
     <section class="short-introduction-section">
+      <div class="overlay" id="overlay"></div>
       <video
         id="factory-vid"
         src="../assets/videos/factory_video.mp4"
@@ -82,7 +97,7 @@
           </ul>
         </div>
         <div class="colleagues">
-          <h1>Kik vagyunk mi</h1>
+          <h1 class="title">Kik vagyunk mi</h1>
           <div class="profile right-title">
             <div>
               <img src="./assets/imgs/profile.png" alt="" />

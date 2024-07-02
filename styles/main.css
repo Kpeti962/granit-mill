@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   scrollbar-width: thin;
+  font-family: "Roboto Mono", monospace;
 }
 
 .logo-mobile {
@@ -78,17 +79,16 @@
   margin-bottom: 40px;
 }
 .body-section .machines ul {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
-  margin: auto;
   flex-wrap: wrap;
 }
 .body-section .machines ul div {
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 35%;
 }
 .body-section .machines ul div a {
   text-decoration: none;
@@ -110,21 +110,18 @@
   transition: ease-in-out 0.8s;
 }
 .body-section .colleagues {
-  text-align: center;
   margin: auto;
+  text-align: center;
 }
-.body-section .colleagues h1 {
+.body-section .colleagues .title {
   margin: 60px 0;
 }
 .body-section .colleagues .profile {
   display: flex;
   align-items: center;
-  margin: 50px 0;
+  margin: 90px 0;
 }
 .body-section .colleagues .profile img {
-  width: 50%;
-}
-.body-section .colleagues .profile div {
   width: 50%;
 }
 .body-section .colleagues .profile div h1 {
@@ -157,6 +154,19 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none; /* Alapértelmezetten rejtve van */
+  }
+  .overlay.active {
+    display: block; /* Ha az 'active' osztály van rajta, akkor megjelenítjük */
+  }
   .nav-bar {
     visibility: hidden;
   }
@@ -179,7 +189,7 @@
     position: absolute;
     top: 83px;
     right: 0;
-    z-index: 30;
+    z-index: 100;
   }
   .nav-mobile.active a {
     text-decoration: none;
@@ -188,10 +198,12 @@
     cursor: pointer;
   }
   header {
+    z-index: 100;
     height: 12vh;
     background: #336699;
   }
   header .hamburger-icon {
+    z-index: 100;
     display: block;
     width: 50px;
     height: auto;
@@ -200,14 +212,15 @@
     right: 0px;
     cursor: pointer;
   }
-  .machines ul div {
-    flex-basis: 50%;
+  .machines ul {
+    flex-direction: column;
   }
   .colleagues .profile {
     flex-direction: column;
   }
-  .colleagues .profile div h3 {
-    width: 100%;
+  .colleagues .profile img {
+    min-width: 250px;
+    height: auto;
   }
   .colleagues .left-title {
     flex-direction: column-reverse;

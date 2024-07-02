@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   .logo {
+   
     height: 12vh;
     width: auto;
   }
@@ -19,35 +20,30 @@
       }
     }
   }
- 
-
- 
 }
-
 
 @mixin footer-style {
   display: flex;
   align-items: center;
   height: 60vh;
   margin-top: 100px;
-    background-color: #336699;
-    color: white;
-    .footer-contact {
-
-      text-align: center;
-      p{
-        margin-bottom: 80px;
-      }
-      .left-th {
-        width: 50%;
-      }
-      .right-th {
-        width: 50%;
-      }
+  background-color: #336699;
+  color: white;
+  .footer-contact {
+    text-align: center;
+    p {
+      margin-bottom: 80px;
     }
+    .left-th {
+      width: 50%;
+    }
+    .right-th {
+      width: 50%;
+    }
+  }
 }
 
-@mixin machines-section-style{
+@mixin machines-section-style {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -58,7 +54,7 @@
     overflow: hidden;
     margin-top: 50px;
     img {
-      width: 350px;
+      width: 320px;
       height: auto;
       &:hover {
         scale: 1.05;
@@ -72,4 +68,3 @@
     }
   }
 }
-

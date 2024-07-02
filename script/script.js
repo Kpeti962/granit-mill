@@ -5,14 +5,16 @@ let factoryVid = document.getElementById('factory-vid');
 
   const hamburger = document.getElementById('hamburgerOpen');
   const mobileNavBar = document.getElementById('mobile-nav-bar');
+  const overlay = document.getElementById('overlay');
 
   hamburger.addEventListener('click', () => {
     mobileNavBar.classList.remove('hidden');
     mobileNavBar.classList.toggle('active');
+    overlay.classList.toggle('active');
   });
   if (window.innerWidth > 1080) {
     mobileNavBar.classList.remove('active');
-
+    overlay.classList.remove('active');
   }
 
 
