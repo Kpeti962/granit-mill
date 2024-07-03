@@ -6,7 +6,7 @@
   overflow: auto;
   margin: 0;
   padding: 0;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -58,6 +58,7 @@
   .machines {
     text-align: center;
     text-decoration: none;
+    
     h3 {
       font-size: x-large;
       margin-bottom: 40px;
