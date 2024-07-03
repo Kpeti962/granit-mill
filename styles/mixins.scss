@@ -4,12 +4,12 @@
   justify-content: space-evenly;
   align-items: center;
   .logo {
-   
     height: 12vh;
     width: auto;
   }
   nav {
     text-align: right;
+    overflow: hidden !important;
     a {
       padding: 20px;
       text-decoration: none;
@@ -24,21 +24,32 @@
 
 @mixin footer-style {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 60vh;
   margin-top: 100px;
   background-color: #336699;
   color: white;
   .footer-contact {
+    width: 70%;
     text-align: center;
     p {
       margin-bottom: 80px;
     }
-    .left-th {
-      width: 50%;
-    }
-    .right-th {
-      width: 50%;
+    div {
+      width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      table {
+        text-align: center;
+        .right-th {
+          text-align: start;
+        }
+        .right-th {
+          width: 200px;
+        }
+      }
     }
   }
 }

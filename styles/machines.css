@@ -26,6 +26,7 @@
 }
 .nav-bar nav {
   text-align: right;
+  overflow: hidden !important;
 }
 .nav-bar nav a {
   padding: 20px;
