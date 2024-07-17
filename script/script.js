@@ -16,16 +16,17 @@ let factoryVid = document.getElementById('factory-vid');
     mobileNavBar.classList.remove('active');
     overlay.classList.remove('active');
   }
-
-
+  
+  
   const products = document.getElementById("products");
   const contact = document.getElementById("contact");
+  const homeButton = document.getElementById("homeButton");
   const productsScroll = document.getElementById("productsScroll");
   const productsScroll2 = document.getElementById("productsScroll2");
   const contactScroll = document.getElementById("contactScroll");
   const contactScroll2 = document.getElementById("contactScroll2");
-
-
+  
+  
   productsScroll.addEventListener("click", () => {
     
     products.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -33,14 +34,18 @@ let factoryVid = document.getElementById('factory-vid');
   productsScroll2.addEventListener("click", () => {
     
     products.scrollIntoView({ behavior: "smooth", block: "center" });
+    mobileNavBar.classList.remove('active');
+    overlay.classList.remove('active');
   })
-
-  contactScroll.addEventListener("click", () => {
-      contact.scrollIntoView({behavior: "smooth"});
-    })
-  contactScroll2.addEventListener("click", () => {
-      contact.scrollIntoView({behavior: "smooth"});
-    })
   
-
-   
+  contactScroll.addEventListener("click", () => {
+    contact.scrollIntoView({behavior: "smooth"});
+  })
+  contactScroll2.addEventListener("click", () => {
+    contact.scrollIntoView({behavior: "smooth"});
+    mobileNavBar.classList.remove('active');
+    overlay.classList.remove('active');
+  })
+  
+  
+  

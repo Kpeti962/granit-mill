@@ -7,16 +7,22 @@
     height: 12vh;
     width: auto;
   }
-  nav {
-    text-align: right;
+  nav{
+    display: flex;
+    text-align: center;
     overflow: hidden !important;
+    height: 50px;
+    align-items: center;
     a {
+      margin: 0 10px;
       padding: 20px;
       text-decoration: none;
       color: white;
       cursor: pointer;
-      &:hover {
+      &:hover {       
         background-color: antiquewhite;
+        scale: 1.1;
+        transition: ease-in-out 0.2s;
       }
     }
   }

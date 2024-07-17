@@ -9,39 +9,42 @@
   font-family: "Roboto Mono", monospace;
 }
 
-.logo-mobile {
+header .logo-mobile {
   display: none;
 }
-
-.hamburger-icon {
+header .hamburger-icon {
   display: none;
 }
-
-.nav-bar {
+header .nav-bar {
   background: #336699;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.nav-bar .logo {
+header .nav-bar .logo {
   height: 12vh;
   width: auto;
 }
-.nav-bar nav {
-  text-align: right;
+header .nav-bar nav {
+  display: flex;
+  text-align: center;
   overflow: hidden !important;
+  height: 50px;
+  align-items: center;
 }
-.nav-bar nav a {
+header .nav-bar nav a {
+  margin: 0 10px;
   padding: 20px;
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
-.nav-bar nav a:hover {
+header .nav-bar nav a:hover {
   background-color: antiquewhite;
+  scale: 1.1;
+  transition: ease-in-out 0.6s;
 }
-
-.nav-mobile {
+header .nav-mobile {
   display: none; /* Alapértelmezetten rejtve van */
 }
 
@@ -94,6 +97,7 @@
   align-items: center;
 }
 .body-section .machines ul div a {
+  width: 500px;
   text-decoration: none;
 }
 .body-section .machines ul div li {
@@ -104,8 +108,8 @@
   width: auto;
 }
 .body-section .machines ul div img:hover {
-  scale: 1.2;
-  transition: ease-in-out 1.5s;
+  scale: 1.07;
+  transition: ease-in-out 0.8s;
   cursor: pointer;
 }
 .body-section .machines ul div img:not(:hover) {
@@ -183,10 +187,15 @@
   .overlay.active {
     display: block; /* Ha az 'active' osztály van rajta, akkor megjelenítjük */
   }
-  .nav-bar {
+  header {
+    z-index: 100;
+    height: 12vh;
+    background: #336699;
+  }
+  header .nav-bar {
     visibility: hidden;
   }
-  .logo-mobile {
+  header .logo-mobile {
     display: flex;
     height: 8vh;
     width: auto;
@@ -194,29 +203,27 @@
     top: 10px;
     left: 0px;
   }
-  .nav-mobile.active {
+  header .nav-mobile.active {
     display: flex;
     flex-direction: column;
-    background: #336699;
+    background: #62788e;
     height: 40vh;
     width: 250px;
     justify-content: center;
     text-align: center;
-    position: absolute;
-    top: 83px;
-    right: 0;
-    z-index: 100;
+    position: fixed;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    z-index: 200;
   }
-  .nav-mobile.active a {
+  header .nav-mobile.active a {
     text-decoration: none;
     margin: 25px 0;
     color: white;
     cursor: pointer;
-  }
-  header {
-    z-index: 100;
-    height: 12vh;
-    background: #336699;
   }
   header .hamburger-icon {
     z-index: 100;

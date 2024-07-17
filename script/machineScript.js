@@ -1,6 +1,7 @@
 const images = document.querySelectorAll('.machines-section img');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
+const overlay = document.getElementById('overlay');
 
 images.forEach((img, index) => {
   img.addEventListener('click', () => {
@@ -26,11 +27,12 @@ const hamburger = document.getElementById('hamburgerOpen');
 const mobileNavBar = document.getElementById('mobile-nav-bar');
 
 hamburger.addEventListener('click', () => {
-mobileNavBar.classList.remove('hidden');
-mobileNavBar.classList.toggle('active');
+  mobileNavBar.classList.remove('hidden');
+  mobileNavBar.classList.toggle('active');
+  overlay.classList.toggle('active');
 });
 if (window.innerWidth > 1080) {
-mobileNavBar.classList.remove('active');
-
+  mobileNavBar.classList.remove('active');
+  overlay.classList.remove('active');
 }
 

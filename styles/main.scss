@@ -10,19 +10,20 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+header {
+  .logo-mobile {
+    display: none;
+  }
+  .hamburger-icon {
+    display: none;
+  }
 
-.logo-mobile {
-  display: none;
-}
-.hamburger-icon {
-  display: none;
-}
-
-.nav-bar {
-  @include nav-bar-style;
-}
-.nav-mobile {
-  display: none; /* Alapértelmezetten rejtve van */
+  .nav-bar {
+    @include nav-bar-style;
+  }
+  .nav-mobile {
+    display: none; /* Alapértelmezetten rejtve van */
+  }
 }
 
 .short-introduction-section {
@@ -58,7 +59,7 @@
   .machines {
     text-align: center;
     text-decoration: none;
-    
+
     h3 {
       font-size: x-large;
       margin-bottom: 40px;
@@ -71,6 +72,7 @@
       div {
         flex-basis: 20%;
         a {
+          width: 500px;
           text-decoration: none;
         }
         display: flex;
@@ -83,8 +85,8 @@
           height: 200px;
           width: auto;
           &:hover {
-            scale: 1.2;
-            transition: ease-in-out 1.5s;
+            scale: 1.07;
+            transition: ease-in-out 0.8s;
             cursor: pointer;
           }
           &:not(:hover) {
@@ -143,42 +145,44 @@
   .overlay.active {
     display: block; /* Ha az 'active' osztály van rajta, akkor megjelenítjük */
   }
-  .nav-bar {
-    visibility: hidden;
-  }
-  .logo-mobile {
-    display: flex;
-    height: 8vh;
-    width: auto;
-    position: absolute;
-    top: 10px;
-    left: 0px;
-  }
-
-  .nav-mobile.active {
-    display: flex;
-    flex-direction: column;
-    background: #336699;
-    height: 40vh;
-    width: 250px;
-    justify-content: center;
-    text-align: center;
-    position: absolute;
-    top: 83px;
-    right: 0;
-    z-index: 100;
-    a {
-      text-decoration: none;
-      margin: 25px 0;
-      color: white;
-      cursor: pointer;
-    }
-  }
-
   header {
     z-index: 100;
     height: 12vh;
     background: #336699;
+    .nav-bar {
+      visibility: hidden;
+    }
+    .logo-mobile {
+      display: flex;
+      height: 8vh;
+      width: auto;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+    }
+
+    .nav-mobile.active {
+      display: flex;
+      flex-direction: column;
+      background: #62788e;
+      height: 40vh;
+      width: 250px;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 5px;
+      z-index: 200;
+      a {
+        text-decoration: none;
+        margin: 25px 0;
+        color: white;
+        cursor: pointer;
+      }
+    }
     .hamburger-icon {
       z-index: 100;
       display: block;
@@ -210,14 +214,9 @@
   }
 }
 @media screen and (max-width: 690px) {
-
   .colleagues {
-   
     .profile {
-     
-     
       div {
-       
         h3 {
           justify-content: center;
           width: 200px !important;
@@ -226,7 +225,7 @@
       }
     }
   }
- 
+
   .machines {
     ul {
       div {
