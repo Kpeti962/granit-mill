@@ -1,8 +1,14 @@
 const images = document.querySelectorAll('.machines-section img');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
-const overlay = document.getElementById('overlay');
+const hamburgerButton = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu-placeholder');
 
+
+
+hamburgerButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
 images.forEach((img, index) => {
   img.addEventListener('click', () => {
     modals[index].style.display = 'block';

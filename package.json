@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node-sass": "sass -w /:dist/css/"
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
   }
 }

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../../src/output.css" rel="stylesheet" />
+
+    <title>Document</title>
+    <style>
+      .no-hover-effect {
+        scale: 1.07;
+        transition: ease-in-out 0.8s;
+        cursor: pointer;
+      }
+
+      .no-hover-effect:not(:hover) {
+        scale: 1;
+        transition: ease-in-out 0.8s;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-primary sticky top-0 z-50 px-4 flex justify-center">
+      <div class="container mx-auto flex items-center py-4">
+        <!-- Left section: Logo -->
+        <div class="flex items-center sm:w-1/3 m-auto">
+          <img
+            src="../../assets/imgs/logo.png"
+            alt="Logo"
+            class="h-auto w-56 min-w-40 sm:ml-2"
+          />
+        </div>
+
+        <!-- Hamburger menu (for mobile) -->
+        <div class="flex md:hidden">
+          <button id="hamburger" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center section: Menu -->
+        <nav class="m-auto hidden md:flex md:flex-grow justify-end">
+          <ul class="w-full flex justify-evenly space-x-4 text-white">
+            <li>
+              <a href="../../index.html" class="hover:text-secondary font-bold"
+                >Kezdőlap</a
+              >
+            </li>
+            <li>
+              <a href="#aboutus" class="hover:text-secondary font-bold"
+                >Granulálógépek</a
+              >
+            </li>
+            <li>
+              <a href="#results" class="hover:text-secondary font-bold"
+                >Keverőgépek</a
+              >
+            </li>
+            <li>
+              <a href="#results" class="hover:text-secondary font-bold"
+                >Extruderek</a
+              >
+            </li>
+            <li class="w-[96px]">
+              <a href="#results" class="hover:text-secondary font-bold"
+                >Egyéb gépek</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right section: Buttons (for desktop) -->
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <nav
+      id="mobile-menu-placeholder"
+      class="mobile-menu hidden m-auto h-full z-50 flex-col items-center md:hidden"
+    >
+      <ul class="w-full text-center">
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="../index.html" class="hover:text-secondary font-bold">Kezdőlap</a>
+        </li>
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="./granulalogepek.html" class="hover:text-secondary font-bold">Granulálógépek</a>
+        </li>
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="./keverogepek.html" class="hover:text-secondary font-bold">Keverőgépek</a>
+        </li>
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="./extruderek.html" class="hover:text-secondary font-bold"
+            >Extruderek</a
+          >
+        </li>
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="./egyeb-gepek.html" class="hover:text-secondary font-bold"
+            >Egyéb gépek</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section
+      class="machines-section justify-around grid text-center grid-cols-1 md:grid-cols-3"
+    >
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img1"
+            src="../../assets/imgs/granulating-machines/granit-7.5.png"
+            alt="Granit 7.5"
+          />
+        </div>
+        <p>Granit 7,5-es granulálógép</p>
+      </div>
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img2"
+            src="../../assets/imgs/granulating-machines/granit-22.png"
+            alt="Granit 22"
+          />
+        </div>
+        <p>Granit 22-es granulálógép</p>
+      </div>
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img3"
+            src="../../assets/imgs/granulating-machines/granit-35.png"
+            alt="Granit 35"
+          />
+        </div>
+        <p>Granit 35-ös granulálógép</p>
+      </div>
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img4"
+            src="../../assets/imgs/granulating-machines/granit-90-1.png"
+            alt="Granit 90-1"
+          />
+        </div>
+        <p>Granit 90 granuláló vályus csigás adagolóval</p>
+      </div>
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img5"
+            src="../../assets/imgs/granulating-machines/granit-90-2.png"
+            alt="Granit 90-2"
+          />
+        </div>
+        <p>Gránit-90, faipari és mezőgazdasági melléktermékek granulálására</p>
+      </div>
+      <div class="overflow-hidden mt-[50px]">
+        <div class="flex justify-center">
+          <img
+            class="w-[320px] h-auto no-hover-effect"
+            id="img6"
+            src="../../assets/imgs/granulating-machines/granit-90-3.png"
+            alt="Granit 90-3"
+          />
+        </div>
+        <p>Gránit 90 típusú granulálógép</p>
+      </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <!-- Modals -->
+    <div
+      id="modal1"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal2"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.gránit 22
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal3"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal4"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal5"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.
+        </p>
+      </div>
+    </div>
+    <div
+      id="modal6"
+      class="modal hidden fixed z-10 pt-[100px] left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="modal-content m-auto p-[20px] w-4/6 h-[300px] bg-white">
+        <span class="close text-gray-400 flex justify-end cursor-pointer"
+          >&times;</span
+        >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempora molestias dolorem accusamus incidunt dolor, ratione assumenda
+          saepe a esse.
+        </p>
+      </div>
+    </div>
+
+    <script src="../../script/machineScript.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

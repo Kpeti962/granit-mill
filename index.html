@@ -9,54 +9,123 @@
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="./src/output.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/main.css" />
+
     <title>Document</title>
+    <style>
+      .no-hover-effect {
+        scale: 1.07;
+        transition: ease-in-out 0.8s;
+        cursor: pointer;
+      }
+
+      .no-hover-effect:not(:hover) {
+        scale: 1;
+        transition: ease-in-out 0.8s;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <img class="logo-mobile" src="../assets/imgs/logo.png" alt="" />
-      <img
-      id="hamburgerOpen"
-      class="hamburger-icon"
-      src="./assets/imgs/icons/hamburger.png"
-      alt=""
-      />
-      <div class="nav-bar">
-        <img class="logo" src="../assets/imgs/logo.png" alt="" />
-        <nav>
-          <a href="./index.html">Kezdőlap</a>
-          <a id="productsScroll">Termékek</a>
-          <a id="contactScroll">Kapcsolat</a>
+  <body class="box-border w-full overflow-auto m-0 p-0">
+    <header class="bg-primary w-full top-0 z-50 px-4 flex justify-center">
+      <div class="container mx-auto flex items-center py-4">
+        <!-- Left section: Logo -->
+        <div class="flex items-center sm:w-1/2 m-auto">
+          <a href="./index.html">
+            <img
+              src="./assets/imgs/logo.png"
+              alt="Logo"
+              class="h-auto w-56 sm:ml-10"
+            />
+          </a>
+        </div>
+
+        <!-- Hamburger menu (for mobile) -->
+        <div class="flex md:hidden">
+          <button id="hamburger" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Center section: Menu -->
+        <nav class="m-auto hidden md:flex md:flex-grow justify-end">
+          <ul class="w-full flex justify-evenly space-x-4 text-white">
+            <li>
+              <a href="./index.html" class="hover:text-secondary font-bold"
+                >Kezdőlap</a
+              >
+            </li>
+            <li class="productsScroll">
+              <a class="hover:text-secondary font-bold cursor-pointer"
+                >Termékek</a
+              >
+            </li>
+            <li class="contactScroll">
+              <a class="hover:text-secondary font-bold cursor-pointer"
+                >Kapcsolat</a
+              >
+            </li>
+          </ul>
         </nav>
-      </div>
-      <div class="nav-mobile" id="mobile-nav-bar">
-        <a href="./index.html" id="homeButton">Kezdőlap</a>
-        <a id="productsScroll2">Termékek</a>
-        <a id="contactScroll2">Kapcsolat</a>
+
+        <!-- Right section: Buttons (for desktop) -->
       </div>
     </header>
+    <nav
+      id="mobile-menu-placeholder"
+      class="mobile-menu hidden m-auto h-full  z-50 flex-col items-center  md:hidden"
+    >
+      <ul class="w-full text-center">
+        <li class="border-b border-black pb-4 pt-4">
+          <a href="#home" class="hover:text-secondary font-bold">Kezdőlap</a>
+        </li>
+        <li class="border-b border-black pb-4 pt-4 productsScroll2">
+          <a href="#aboutus" class="hover:text-secondary font-bold">Termékek</a>
+        </li>
+        <li  class="border-b border-black pb-4 pt-4 contactScroll2">
+          <a href="#results" class="hover:text-secondary font-bold"
+            >Kapcsolat</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-    <section class="short-introduction-section">
+    <section class="relative">
       <div class="overlay" id="overlay"></div>
       <video
         id="factory-vid"
         src="../assets/videos/factory_video.mp4"
+        class="w-full"
         autoplay
         loop
         muted
       ></video>
-      <h1>
+      <h1
+        class="text-3xl font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
+      >
         Komplett takarmányipari megoldások tervezése, gyártása és karbantartása
       </h1>
     </section>
+    <!-- Mobile menu -->
 
-    <section class="body-section">
+
+    <section>
       <div>
-        <div class="presentation-long-text">
-          <h1>Rólunk</h1>
-          <h2>
+        <div class="w-4/5 md:w-3/5 mx-auto my-[160px] font-bold text-justify">
+          <h1 class="text-3xl pb-[60px] text-center">Rólunk</h1>
+          <h2 class="text-xl">
             A Gránit-Mill kft. a takarmányipari gépek szinte teljes
             termékskáláját illetően vállalja tervezési, gépgyártási feladatok
             elvégzését, termékeinek garanciális és garancián túli javítását,
@@ -66,109 +135,182 @@
           </h2>
         </div>
 
-        <div class="machines">
-          <h3>Gépeink</h3>
-          <ul>
-            <div id="products">
-              <a href="./components/machines/granulating-machines.html">
-                <img src="../assets/imgs/granulating_machine.png" alt="" />
+        <div class="text-center products">
+          <h3 class="text-3xl font-bold mb-[40px]">Gépeink</h3>
+          <ul
+            class="w-full grid sm:grid-cols-2 md:grid-cols-4 justify-center align-middle"
+          >
+            <div class="flex flex-col justify-center">
+              <a href="./machines/granulalogepek.html">
+                <div class="flex justify-center">
+                  <img
+                    class="no-hover-effect h-[200px] w-auto overflow-hidden"
+                    src="../assets/imgs/granulating_machine.png"
+                    alt=""
+                  />
+                </div>
                 <li>Granulálógépek</li>
               </a>
             </div>
-            <div>
-              <a href="./components/machines/mixer-machines.html">
-                <img src="../assets/imgs/mixing_machine.png" alt="" />
+            <div class="flex flex-col justify-center">
+              <a href="./machines/keverogepek.html">
+                <div class="flex justify-center">
+                  <img
+                    class="no-hover-effect h-[200px] w-auto overflow-hidden"
+                    src="../assets/imgs/mixing_machine.png"
+                    alt=""
+                  />
+                </div>
                 <li>Keverőgépek</li>
               </a>
             </div>
-            <div>
-              <a href="./components/machines/extruder-machines.html">
-                <img src="../assets/imgs/extruder.png" alt="" />
+            <div class="h-full flex flex-col justify-center align-middle">
+              <a href="./machines/extruderek.html">
+                <div class="flex justify-center">
+                  <img
+                    class="no-hover-effect h-[200px] w-auto overflow-hidden"
+                    src="../assets/imgs/extruder.png"
+                    alt=""
+                  />
+                </div>
                 <li>Extruderek</li>
               </a>
             </div>
-            <div>
-              <a href="./components/machines/other-machines.html">
-                <img src="../assets/imgs/other_machine.png" alt="" />
+            <div class="flex flex-col justify-center">
+              <a href="./machines/egyeb-gepek.html">
+                <div class="flex justify-center">
+                  <img
+                    class="no-hover-effect h-[200px] w-auto overflow-hidden"
+                    src="../assets/imgs/other_machine.png"
+                    alt=""
+                  />
+                </div>
                 <li>Egyéb gépek</li>
               </a>
             </div>
           </ul>
         </div>
-        <div class="colleagues">
-          <h1 class="title">Kik vagyunk mi</h1>
-          <div class="profile right-title">
-            <div>
-              <img src="./assets/imgs/profile.png" alt="" />
-            </div>
-            <div>
-              <h1>Mucsi Attila</h1>
-              <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                cumque pariatur vel laudantium inventore cum obcaecati porro, ut
-                fugiat dolorem soluta molestias deleniti atque eius facilis
-                impedit illum odit sequi nemo? Maiores odio tempore, provident
-                corrupti harum cum ex ab?
-              </h3>
-            </div>
-          </div>
-          <div class="profile left-title">
-            <div>
-              <h1>Koncz Edvárd</h1>
-              <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                cumque pariatur vel laudantium inventore cum obcaecati porro, ut
-                fugiat dolorem soluta molestias deleniti atque eius facilis
-                impedit illum odit sequi nemo? Maiores odio tempore, provident
-                corrupti harum cum ex ab?
-              </h3>
-            </div>
-            <div>
-              <img src="./assets/imgs/profile.png" alt="" />
-            </div>
-          </div>
-          <div class="profile right-title">
-            <div>
-              <img src="./assets/imgs/profile.png" alt="" />
-            </div>
-            <div>
-              <h1>Teszt Elek</h1>
-              <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                cumque pariatur vel laudantium inventore cum obcaecati porro, ut
-                fugiat dolorem soluta molestias deleniti atque eius facilis
-                impedit illum odit sequi nemo? Maiores odio tempore, provident
-                corrupti harum cum ex ab?
-              </h3>
+        <section class="contact p-6 pt-24 bg-white ">
+          <h1 class="contactPage text-primary text-3xl my-6 text-center">
+            Kik vagyunk mi
+          </h1>
+          <div
+            class="text-primary flex flex-col md:flex-row text-center justify-evenly my-28 lg:mx-40"
+          >
+            <img
+              class="w-64 rounded-full m-auto md:mx-0 md:my-0 mb-6"
+              src="./assets/imgs/mucsi-a.jpg"
+              alt="A Gránit-mill ügyvezető igazgatója, Mucsi Attila"
+            />
+            <div class="flex flex-col justify-evenly items-center">
+              <div class="flex flex-col">
+                <h2 class="text-primary text-2xl">Mucsi Attila</h2>
+                <h2 class="text-primary text-xl mb-4 md:mb-0">
+                  Ügyvezető igazgató
+                </h2>
+              </div>
+              <div class="w-full md:flex md:justify-evenly">
+                <div class="flex justify-center">
+                  <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
+                </div>
+                <h2 class="items-center">+36-30/123-4567</h2>
+              </div>
+              <div>
+                <div class="w-full md:flex md:justify-evenly">
+                  <div class="flex justify-center">
+                    <img
+                      src="./assets/email2.svg"
+                      class="w-[30px] mr-1 md:mr-3"
+                      alt=""
+                    />
+                  </div>
+                  <h2 class="items-center">valami@granit-mill.hu</h2>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div
+            class="text-primary flex flex-col-reverse md:flex-row text-center justify-evenly my-28 lg:mx-40"
+          >
+            <div class="flex flex-col justify-evenly items-center">
+              <div class="flex flex-col">
+                <h2 class="text-primary text-2xl">Koncz Edvárd</h2>
+                <h2 class="text-primary text-xl mb-4 md:mb-0">
+                  Csöves a cég környékéről
+                </h2>
+              </div>
+              <div class="w-full md:flex md:justify-evenly">
+                <div class="flex justify-center">
+                  <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
+                </div>
+                <h2 class="items-center">+36-30/123-4567</h2>
+              </div>
+              <div>
+                <div class="w-full md:flex md:justify-evenly">
+                  <div class="flex justify-center">
+                    <img
+                      src="./assets/email2.svg"
+                      class="w-[30px] mr-1 md:mr-3"
+                      alt=""
+                    />
+                  </div>
+                  <h2 class="items-center">valami@granit-mill.hu</h2>
+                </div>
+              </div>
+            </div>
+            <img
+              class="w-64 rounded-full m-auto md:mx-0 md:my-0 mb-6"
+              src="./assets/imgs/koncz-e.jpg"
+              alt="A Gránit-mill szervizese, Koncz Edvárd"
+            />
+          </div>
+        </section>
+        <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.3486109107093!2d20.268522975828336!3d46.639629554250426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47440bc18826c7af%3A0xd79e7a5e8816400a!2sGr%C3%A1nit-Mill%20Kft.!5e0!3m2!1shu!2shu!4v1724424874417!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <footer class="py-14 bg-primary text-white">
+          <div  id="contact">
+            <h3 class="text-center text-3xl">Gránit-Mill Kft.</h3>
+            <div
+              id="contact"
+              class="w-11/12 m-auto grid grid-cols-1 gap-4 sm:grid-cols-3 text-center mt-8"
+            >
+              <div class="flex flex-col w-full">
+                <div class="w-full flex justify-center mb-6">
+                  <img src="./assets/address.svg" class="w-[70px]" alt="" />
+                </div>
+                <h2 class="text-2xl mb-3 font-bold">Cím:</h2>
+                <div class="h-full flex justify-center items-center">
+                  <h3 class="text-xl text-center">
+                    6600 Szentes, <br />
+                    Téglagyári út 1.
+                  </h3>
+                </div>
+              </div>
+              <div class="flex flex-col w-full">
+                <div class="w-full flex justify-center mb-6">
+                  <img src="./assets/cellphone.svg" class="w-[70px]" alt="" />
+                </div>
+                <h2 class="text-2xl mb-3 font-bold">Tel:</h2>
 
-        <footer>
-          <div class="footer-contact" id="contact">
-            <h3>Gránit-Mill Kft.</h3>
-            <p>6600 Szentes, Téglagyári út 1.</p>
-            <div>
-              <table>
-                <tr>
-                  <th class="left-th">Tel:</th>
-                  <th class="right-th">+36 20 313-1362</th>
-                </tr>
-                <tr>
-                  <th class="left-th"></th>
-                  <th class="right-th">+36 63 400-156</th>
-                </tr>
-                <tr>
-                  <th class="left-th"></th>
-                  <th class="right-th">+36 63 318-185</th>
-                </tr>
-              </table>
-              <table>
-                <tr>
-                  <th class="left-th">E-mail:</th>
-                  <th class="right-th">info@granit-mill.hu</th>
-                </tr>
-              </table>
+                <h3 class="text-xl mb-2">Mucsi Attila</h3>
+                <h3 class="text-l mb-2">
+                  <a href="tel:+36301234567">+36 30 123-4567</a>
+                </h3>
+                <h3 class="text-xl mb-2">Koncz Edvárd</h3>
+                <h3 class="text-l">
+                  <a href="tel:+36301234567">+36 30 123-4567</a>
+                </h3>
+              </div>
+              <div class="flex flex-col w-full">
+                <div class="w-full flex justify-center mb-6">
+                  <img src="./assets/email.svg" class="w-[70px]" alt="" />
+                </div>
+                <h2 class="text-2xl mb-3 font-bold">E-mail:</h2>
+                <div class="h-full flex justify-center items-center">
+                  <h3 class="text-l text-center">
+                    <a href="mailto:info@granit-mill.hu">info@granit-mill.hu</a>
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </footer>
