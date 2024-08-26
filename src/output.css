@@ -771,11 +771,6 @@ video {
   margin-bottom: 160px;
 }
 
-.my-14 {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -798,10 +793,6 @@ video {
 
 .mr-1 {
   margin-right: 0.25rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
 }
 
 .mt-2 {
@@ -927,6 +918,10 @@ video {
   height: 300px;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
 .h-auto {
   height: auto;
 }
@@ -935,12 +930,16 @@ video {
   height: 100%;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
 
-.w-3\/5 {
-  width: 60%;
+.w-4\/5 {
+  width: 80%;
 }
 
 .w-4\/6 {
@@ -957,6 +956,10 @@ video {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[30px\] {
@@ -995,8 +998,8 @@ video {
   width: 100%;
 }
 
-.w-4\/5 {
-  width: 80%;
+.w-\[250px\] {
+  width: 250px;
 }
 
 .min-w-40 {
@@ -2008,6 +2011,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(51 102 153 / var(--tw-bg-opacity));
@@ -2018,8 +2026,17 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
+}
+
+.bg-opacity-55 {
+  --tw-bg-opacity: 0.55;
 }
 
 .decoration-slice {
@@ -2176,14 +2193,14 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-4 {
@@ -2371,16 +2388,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.\!text-black {
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
 }
 
 .underline {

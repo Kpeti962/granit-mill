@@ -8,11 +8,14 @@ const contactScroll = document.querySelector(".contactScroll");
 const contactScroll2 = document.querySelector(".contactScroll2");
 
 
+
 productsScroll.addEventListener("click", () => {
   products.scrollIntoView({ behavior: "smooth", block: "center" });
 })
 productsScroll2.addEventListener("click", () => {
   products.scrollIntoView({ behavior: "smooth", block: "center" });
+  page.classList.toggle('overflow-hidden');
+  mobileMenu.classList.toggle('hidden');
 })
 
 contactScroll.addEventListener("click", () => {
@@ -20,6 +23,8 @@ contactScroll.addEventListener("click", () => {
 })
 contactScroll2.addEventListener("click", () => {
   contact.scrollIntoView({ behavior: "smooth" });
+  page.classList.toggle('overflow-hidden');
+  mobileMenu.classList.toggle('hidden');
 })
 
 
@@ -28,10 +33,14 @@ contactScroll2.addEventListener("click", () => {
 const hamburgerButton = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu-placeholder');
 const overlay = document.getElementById('overlay');
+const page = document.querySelector('.page');
 
 
 hamburgerButton.addEventListener('click', () => {
+
   mobileMenu.classList.toggle('hidden');
+  page.classList.toggle('overflow-hidden');
+  
 });
 
 

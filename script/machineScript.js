@@ -3,11 +3,12 @@ const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
 const hamburgerButton = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu-placeholder');
-
+const page = document.querySelector('.page');
 
 
 hamburgerButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
+  page.classList.toggle('overflow-hidden');
 });
 images.forEach((img, index) => {
   img.addEventListener('click', () => {
@@ -29,16 +30,4 @@ window.addEventListener('click', (event) => {
   });
 });
 
-const hamburger = document.getElementById('hamburgerOpen');
-const mobileNavBar = document.getElementById('mobile-nav-bar');
-
-hamburger.addEventListener('click', () => {
-  mobileNavBar.classList.remove('hidden');
-  mobileNavBar.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-if (window.innerWidth > 1080) {
-  mobileNavBar.classList.remove('active');
-  overlay.classList.remove('active');
-}
 

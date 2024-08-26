@@ -6,7 +6,7 @@
 
     <link href="../../src/output.css" rel="stylesheet" />
 
-    <title>Document</title>
+    <title>Granulálógépek</title>
     <style>
       .no-hover-effect {
         scale: 1.07;
@@ -20,16 +20,18 @@
       }
     </style>
   </head>
-  <body>
+  <body class="page">
     <header class="bg-primary sticky top-0 z-50 px-4 flex justify-center">
       <div class="container mx-auto flex items-center py-4">
         <!-- Left section: Logo -->
         <div class="flex items-center sm:w-1/3 m-auto">
-          <img
-            src="../../assets/imgs/logo.png"
-            alt="Logo"
-            class="h-auto w-56 min-w-40 sm:ml-2"
-          />
+          <a href="../index.html">
+            <img
+              src="../../assets/imgs/logo.png"
+              alt="Logo"
+              class="h-auto w-56 min-w-40 sm:ml-2"
+            />
+          </a>
         </div>
 
         <!-- Hamburger menu (for mobile) -->
@@ -60,22 +62,28 @@
               >
             </li>
             <li>
-              <a href="#aboutus" class="hover:text-secondary font-bold"
+              <a
+                href="./granulalogepek.html"
+                class="hover:text-secondary font-bold"
                 >Granulálógépek</a
               >
             </li>
             <li>
-              <a href="#results" class="hover:text-secondary font-bold"
+              <a
+                href="./keverogepek.html"
+                class="hover:text-secondary font-bold"
                 >Keverőgépek</a
               >
             </li>
             <li>
-              <a href="#results" class="hover:text-secondary font-bold"
+              <a href="./extruderek.html" class="hover:text-secondary font-bold"
                 >Extruderek</a
               >
             </li>
             <li class="w-[96px]">
-              <a href="#results" class="hover:text-secondary font-bold"
+              <a
+                href="./egyeb-gepek.html"
+                class="hover:text-secondary font-bold"
                 >Egyéb gépek</a
               >
             </li>
@@ -84,35 +92,41 @@
 
         <!-- Right section: Buttons (for desktop) -->
       </div>
+      <nav
+        id="mobile-menu-placeholder"
+        class="mobile-menu hidden fixed top-1/2 -translate-y-1/2 bg-gray-200 m-auto h-[400px] w-[250px] z-50 flex-col justify-center items-center md:hidden"
+      >
+        <ul class="h-full w-full text-center flex flex-col justify-evenly">
+          <li class=" pb-4 pt-4">
+            <a href="../index.html" class="hover:text-secondary font-bold"
+              >Kezdőlap</a
+            >
+          </li>
+          <li class=" pb-4 pt-4">
+            <a href="./granulalogepek.html" class="hover:text-secondary font-bold"
+              >Granulálógépek</a
+            >
+          </li>
+          <li class=" pb-4 pt-4">
+            <a href="./keverogepek.html" class="hover:text-secondary font-bold"
+              >Keverőgépek</a
+            >
+          </li>
+          <li class=" pb-4 pt-4">
+            <a href="./extruderek.html" class="hover:text-secondary font-bold"
+              >Extruderek</a
+            >
+          </li>
+          <li class=" pb-4 pt-4">
+            <a href="./egyeb-gepek.html" class="hover:text-secondary font-bold"
+              >Egyéb gépek</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Mobile menu -->
-    <nav
-      id="mobile-menu-placeholder"
-      class="mobile-menu hidden m-auto h-full z-50 flex-col items-center md:hidden"
-    >
-      <ul class="w-full text-center">
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="../index.html" class="hover:text-secondary font-bold">Kezdőlap</a>
-        </li>
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="./granulalogepek.html" class="hover:text-secondary font-bold">Granulálógépek</a>
-        </li>
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="./keverogepek.html" class="hover:text-secondary font-bold">Keverőgépek</a>
-        </li>
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="./extruderek.html" class="hover:text-secondary font-bold"
-            >Extruderek</a
-          >
-        </li>
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="./egyeb-gepek.html" class="hover:text-secondary font-bold"
-            >Egyéb gépek</a
-          >
-        </li>
-      </ul>
-    </nav>
 
     <section
       class="machines-section justify-around grid text-center grid-cols-1 md:grid-cols-3"

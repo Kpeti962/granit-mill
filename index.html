@@ -26,8 +26,8 @@
       }
     </style>
   </head>
-  <body class="box-border w-full overflow-auto m-0 p-0">
-    <header class="bg-primary w-full top-0 z-50 px-4 flex justify-center">
+  <body class="page box-border w-full overflow-auto m-0 p-0">
+    <header class="bg-primary sticky top-0 z-50 px-4 flex justify-center">
       <div class="container mx-auto flex items-center py-4">
         <!-- Left section: Logo -->
         <div class="flex items-center sm:w-1/2 m-auto">
@@ -82,25 +82,25 @@
 
         <!-- Right section: Buttons (for desktop) -->
       </div>
+      <nav
+        id="mobile-menu-placeholder"
+        class="mobile-menu hidden fixed top-1/2 -translate-y-1/2 bg-gray-200 m-auto h-[400px] w-[250px] z-50 flex-col justify-center items-center md:hidden"
+        >
+        <ul class="h-full w-full text-center flex flex-col justify-evenly">
+          <li class=" pb-4 pt-4">
+            <a href="#home" class="hover:text-secondary font-bold">Kezdőlap</a>
+          </li>
+          <li class=" pb-4 pt-4 productsScroll2">
+            <a href="#aboutus" class="hover:text-secondary font-bold">Termékek</a>
+          </li>
+          <li  class=" pb-4 pt-4 contactScroll2">
+            <a href="#results" class="hover:text-secondary font-bold"
+              >Kapcsolat</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    <nav
-      id="mobile-menu-placeholder"
-      class="mobile-menu hidden m-auto h-full  z-50 flex-col items-center  md:hidden"
-    >
-      <ul class="w-full text-center">
-        <li class="border-b border-black pb-4 pt-4">
-          <a href="#home" class="hover:text-secondary font-bold">Kezdőlap</a>
-        </li>
-        <li class="border-b border-black pb-4 pt-4 productsScroll2">
-          <a href="#aboutus" class="hover:text-secondary font-bold">Termékek</a>
-        </li>
-        <li  class="border-b border-black pb-4 pt-4 contactScroll2">
-          <a href="#results" class="hover:text-secondary font-bold"
-            >Kapcsolat</a
-          >
-        </li>
-      </ul>
-    </nav>
 
     <section class="relative">
       <div class="overlay" id="overlay"></div>
@@ -213,7 +213,7 @@
                 <div class="flex justify-center">
                   <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
                 </div>
-                <h2 class="items-center">+36-30/123-4567</h2>
+                <h2 class="items-center"><a href="tel:+36301234567">+36-30/123-4567</a></h2>
               </div>
               <div>
                 <div class="w-full md:flex md:justify-evenly">
@@ -224,7 +224,7 @@
                       alt=""
                     />
                   </div>
-                  <h2 class="items-center">valami@granit-mill.hu</h2>
+                  <h2 class="items-center"><a href="mailto:valami@granit-mill.hu">valami@granit-mill.hu</a></h2>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@
                 <div class="flex justify-center">
                   <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
                 </div>
-                <h2 class="items-center">+36-30/123-4567</h2>
+                <h2 class="items-center"><a href="tel:+36301234567">+36-30/123-4567</a></h2>
               </div>
               <div>
                 <div class="w-full md:flex md:justify-evenly">
@@ -254,7 +254,7 @@
                       alt=""
                     />
                   </div>
-                  <h2 class="items-center">valami@granit-mill.hu</h2>
+                  <h2 class="items-center"><a href="mailto:valami@granit-mill.hu">valami@granit-mill.hu</a></h2>
                 </div>
               </div>
             </div>
