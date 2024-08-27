@@ -17,6 +17,24 @@
         scale: 1;
         transition: ease-in-out 0.8s;
       }
+      .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
+  z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
+  display: none; /* Alapértelmezett állapotban rejtett */
+}
+
+.mobile-menu.open {
+  display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
+}
+
+.overlay.visible {
+  display: block; /* Overlay megjelenítése */
+}
     </style>
   </head>
   <body class="page">
@@ -70,7 +88,7 @@
             <li>
               <a
                 href="./keverogepek.html"
-                class="hover:text-secondary font-bold"
+                class="text-secondary  font-bold"
                 >Keverőgépek</a
               >
             </li>
@@ -108,7 +126,7 @@
             >
           </li>
           <li class=" pb-4 pt-4">
-            <a href="./keverogepek.html" class="hover:text-secondary font-bold"
+            <a href="./keverogepek.html" class="text-secondary font-bold"
               >Keverőgépek</a
             >
           </li>

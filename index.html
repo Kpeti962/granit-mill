@@ -24,6 +24,24 @@
         scale: 1;
         transition: ease-in-out 0.8s;
       }
+      .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
+  z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
+  display: none; /* Alapértelmezett állapotban rejtett */
+}
+
+.mobile-menu.open {
+  display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
+}
+
+.overlay.visible {
+  display: block; /* Overlay megjelenítése */
+}
     </style>
   </head>
   <body class="page box-border w-full overflow-auto m-0 p-0">
@@ -102,8 +120,8 @@
       </nav>
     </header>
 
+    <div class="overlay" id="overlay"></div>
     <section class="relative">
-      <div class="overlay" id="overlay"></div>
       <video
         id="factory-vid"
         src="../assets/videos/factory_video.mp4"

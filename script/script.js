@@ -16,6 +16,7 @@ productsScroll2.addEventListener("click", () => {
   products.scrollIntoView({ behavior: "smooth", block: "center" });
   page.classList.toggle('overflow-hidden');
   mobileMenu.classList.toggle('hidden');
+  overlay.classList.toggle('visible');
 })
 
 contactScroll.addEventListener("click", () => {
@@ -25,6 +26,7 @@ contactScroll2.addEventListener("click", () => {
   contact.scrollIntoView({ behavior: "smooth" });
   page.classList.toggle('overflow-hidden');
   mobileMenu.classList.toggle('hidden');
+  overlay.classList.toggle('visible');
 })
 
 
@@ -40,9 +42,15 @@ hamburgerButton.addEventListener('click', () => {
 
   mobileMenu.classList.toggle('hidden');
   page.classList.toggle('overflow-hidden');
-  
+  overlay.classList.toggle('visible');
 });
-
+overlay.addEventListener('click', function () {
+  
+  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('visible');
+  page.classList.toggle('overflow-hidden');
+});
 
 
 
