@@ -11,8 +11,8 @@
     />
     <link href="./src/output.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo-fav.png">
+    <title>Gránit-mill</title>
     <style>
       .no-hover-effect {
         scale: 1.07;
@@ -45,7 +45,40 @@
     </style>
   </head>
   <body class="page box-border w-full overflow-auto m-0 p-0">
+    
     <header class="bg-primary sticky top-0 z-50 px-4 flex justify-center">
+      <div class="wrongAlert hidden">
+        <div
+          class="fixed top-0 left-1/2 transform -translate-x-1/2 z-40 flex bg-red-200 px-6 py-4 mx-2 my-4 rounded-md text-lg items-center max-w-lg"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            class="text-red-600 w-5 h-5 sm:w-5 sm:h-5 mr-3"
+          >
+            <path
+              fill="currentColor"
+              d="M11.983,0a12.206,12.206,0,0,0-8.51,3.653A11.8,11.8,0,0,0,0,12.207,11.779,11.779,0,0,0,11.8,24h.214A12.111,12.111,0,0,0,24,11.791h0A11.766,11.766,0,0,0,11.983,0ZM10.5,16.542a1.476,1.476,0,0,1,1.449-1.53h.027a1.527,1.527,0,0,1,1.523,1.47,1.475,1.475,0,0,1-1.449,1.53h-.027A1.529,1.529,0,0,1,10.5,16.542ZM11,12.5v-6a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Z"
+            ></path>
+          </svg>
+          <span class="text-red-800">Tölts ki és pipálj ki minden mezőt</span>
+        </div>
+      </div>
+      <div class="successAlert hidden">
+        <div
+          class="fixed top-0 left-1/2 transform -translate-x-1/2 z-40 flex bg-green-200 px-6 py-4 mx-2 my-4 rounded-md text-lg items-center max-w-lg"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            class="text-green-600 w-5 h-5 sm:w-5 sm:h-5 mr-3"
+          >
+            <path
+              fill="currentColor"
+              d="M11.983,0a12.206,12.206,0,0,0-8.51,3.653A11.8,11.8,0,0,0,0,12.207,11.779,11.779,0,0,0,11.8,24h.214A12.111,12.111,0,0,0,24,11.791h0A11.766,11.766,0,0,0,11.983,0ZM10.5,16.542a1.476,1.476,0,0,1,1.449-1.53h.027a1.527,1.527,0,0,1,1.523,1.47,1.475,1.475,0,0,1-1.449,1.53h-.027A1.529,1.529,0,0,1,10.5,16.542ZM11,12.5v-6a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Z"
+            ></path>
+          </svg>
+          <span class="text-green-800">E-mail sikeresen elküldve</span>
+        </div>
+      </div>
       <div class="container mx-auto flex items-center py-4">
         <!-- Left section: Logo -->
         <div class="flex items-center sm:w-1/2 m-auto">
@@ -90,6 +123,11 @@
                 >Termékek</a
               >
             </li>
+            <li class="emailScroll">
+              <a class="hover:text-secondary font-bold cursor-pointer"
+                >Írj nekünk</a
+              >
+            </li>
             <li class="contactScroll">
               <a class="hover:text-secondary font-bold cursor-pointer"
                 >Kapcsolat</a
@@ -110,6 +148,9 @@
           </li>
           <li class=" pb-4 pt-4 productsScroll2">
             <a href="#aboutus" class="hover:text-secondary font-bold">Termékek</a>
+          </li>
+          <li class=" pb-4 pt-4 emailScroll2">
+            <a href="#aboutus" class="hover:text-secondary font-bold">Írj nekünk</a>
           </li>
           <li  class=" pb-4 pt-4 contactScroll2">
             <a href="#results" class="hover:text-secondary font-bold"
@@ -282,6 +323,164 @@
               alt="A Gránit-mill szervizese, Koncz Edvárd"
             />
           </div>
+
+        </section>
+        <section class="email body-font relative bg-white text-gray-400">
+          <div class="container mx-auto px-5 py-24">
+            <div class="mb-12 flex w-full flex-col text-center">
+              <h1
+                class="title-font mb-4 text-2xl font-medium text-primary sm:text-3xl"
+              >
+              Írj nekünk
+              </h1>
+              <p class="mx-auto text-base text-primary leading-relaxed lg:w-2/3">
+                Bármi kérdésed van,  írj bátran
+              </p>
+            </div>
+    
+            <div class="mx-auto md:w-2/3 lg:w-1/2">
+              <div class="-m-2 md:flex flex-wrap">
+                <!-- form -->
+                <div class="md:w-1/2 pt-8">
+                  <div class="relative">
+                    <select
+                      id="options"
+                      name="options"
+                      class="peer form-group w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-2 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
+                    >
+                      <option value="" disabled selected class="text-gray-700">
+                        Mivel kapcsolatban írsz?
+                      </option>
+                      <option value="Élhajlító gépek" class="text-gray-700">
+                        Granulálógépek
+                      </option>
+                      <option value="Lemezvágó ollók" class="text-gray-700">
+                        Keverőgépek
+                      </option>
+                      <option value="Lézervágó gépek" class="text-gray-700">
+                        Extruderek
+                      </option>
+                      
+                      <option value="Lézervágó gépek" class="text-gray-700">
+                        Egyéb gépek
+                      </option>
+                      
+                      <option value="Szerviz" class="text-gray-700">Szerviz</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="md:w-1/2 pt-8">
+                  <div class="relative">
+                    <input
+                      required
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="peer form-group w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
+                      placeholder="Név"
+                    />
+                    <label
+                      for="name"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      >Név</label
+                    >
+                  </div>
+                </div>
+                <div class="w-full pt-8">
+                  <div class="relative">
+                    <input
+                      type="tel"
+                      id="tel"
+                      name="tel"
+                      class="peer form-group w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
+                      placeholder="Telefonszám"
+                    />
+                    <label
+                      for="tel"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      >Telefonszám</label
+                    >
+                  </div>
+                  <div class="relative mt-6">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="peer form-group w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
+                      placeholder="Email"
+                    />
+                    <label
+                      for="email"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      >Email</label
+                    >
+                  </div>
+                  <div class="relative mt-6">
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      class="peer form-group w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
+                      placeholder="Cégnév"
+                    />
+                    <label
+                      for="company"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      >Cégnév (nem kötelező)</label
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 w-full pt-8">
+                  <div class="relative">
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="peer form-group h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
+                      placeholder="Üzenet"
+                    ></textarea>
+                    <label
+                      for="message"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      >Üzenet</label
+                    >
+                  </div>
+                </div>
+                <div class="w-full pt-8">
+                  <div class="relative flex">
+                    <div class="flex flex-col justify-center mr-3">
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        name="dataSheet"
+                        placeholder="Email"
+                        class="flex items-center"
+                      />
+                    </div>
+                    <label for="email" class="bg-transparent text-primary"
+                      >Elolvastam és elfogadom az
+                      <a
+                        href="../assets/Adatkezelési tájékozattó.pdf"
+                        target="_blank"
+                        class="text-indigo-400"
+                      >
+                        Adatkezelési tájékoztatóban
+                      </a>
+                      foglaltakat</label
+                    >
+                  </div>
+                </div>
+                <div class="w-full pt-8">
+                  <button
+                    type="submit"
+                    onclick="sendMail()"
+                    class="mx-auto flex rounded border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none"
+                  >
+                    Küldés
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.3486109107093!2d20.268522975828336!3d46.639629554250426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47440bc18826c7af%3A0xd79e7a5e8816400a!2sGr%C3%A1nit-Mill%20Kft.!5e0!3m2!1shu!2shu!4v1724424874417!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <footer class="py-14 bg-primary text-white">
@@ -335,7 +534,20 @@
       </div>
     </section>
 
+
+    
+
     <script src="../script/script.js"></script>
+    <script src="../script/emailScript.js"></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('GEE2KebGzoAF9pDIG');
+    })();
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

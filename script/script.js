@@ -6,6 +6,9 @@ const productsScroll = document.querySelector(".productsScroll");
 const productsScroll2 = document.querySelector(".productsScroll2");
 const contactScroll = document.querySelector(".contactScroll");
 const contactScroll2 = document.querySelector(".contactScroll2");
+const emailScroll = document.querySelector(".emailScroll");
+const emailScroll2 = document.querySelector(".emailScroll2");
+const email = document.querySelector(".email");
 
 
 
@@ -24,6 +27,15 @@ contactScroll.addEventListener("click", () => {
 })
 contactScroll2.addEventListener("click", () => {
   contact.scrollIntoView({ behavior: "smooth" });
+  page.classList.toggle('overflow-hidden');
+  mobileMenu.classList.toggle('hidden');
+  overlay.classList.toggle('visible');
+})
+emailScroll.addEventListener("click", () => {
+  email.scrollIntoView({ behavior: "smooth" });
+})
+emailScroll2.addEventListener("click", () => {
+  email.scrollIntoView({ behavior: "smooth" });
   page.classList.toggle('overflow-hidden');
   mobileMenu.classList.toggle('hidden');
   overlay.classList.toggle('visible');
