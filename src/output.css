@@ -980,6 +980,14 @@ video {
   height: 100%;
 }
 
+.h-\[32px\] {
+  height: 32px;
+}
+
+.min-h-\[32px\] {
+  min-height: 32px;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -2304,6 +2312,11 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-4 {

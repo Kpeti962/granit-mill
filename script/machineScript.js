@@ -13,7 +13,7 @@ hamburgerButton.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', function () {
-  
+
   mobileMenu.classList.toggle('hidden');
   mobileMenu.classList.remove('open');
   overlay.classList.remove('visible');

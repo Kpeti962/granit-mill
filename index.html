@@ -11,7 +11,7 @@
     />
     <link href="./src/output.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo-fav.png">
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo-fav.png" />
     <title>Gránit-mill</title>
     <style>
       .no-hover-effect {
@@ -25,27 +25,26 @@
         transition: ease-in-out 0.8s;
       }
       .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
-  z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
-  display: none; /* Alapértelmezett állapotban rejtett */
-}
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
+        z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
+        display: none; /* Alapértelmezett állapotban rejtett */
+      }
 
-.mobile-menu.open {
-  display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
-}
+      .mobile-menu.open {
+        display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
+      }
 
-.overlay.visible {
-  display: block; /* Overlay megjelenítése */
-}
+      .overlay.visible {
+        display: block; /* Overlay megjelenítése */
+      }
     </style>
   </head>
   <body class="page box-border w-full overflow-auto m-0 p-0">
-    
     <header class="bg-primary sticky top-0 z-50 px-4 flex justify-center">
       <div class="wrongAlert hidden">
         <div
@@ -123,14 +122,14 @@
                 >Termékek</a
               >
             </li>
-            <li class="emailScroll">
-              <a class="hover:text-secondary font-bold cursor-pointer"
-                >Írj nekünk</a
-              >
-            </li>
             <li class="contactScroll">
               <a class="hover:text-secondary font-bold cursor-pointer"
                 >Kapcsolat</a
+              >
+            </li>
+            <li class="emailScroll">
+              <a class="hover:text-secondary font-bold cursor-pointer"
+                >Írj nekünk</a
               >
             </li>
           </ul>
@@ -141,20 +140,24 @@
       <nav
         id="mobile-menu-placeholder"
         class="mobile-menu hidden fixed top-1/2 -translate-y-1/2 bg-gray-200 m-auto h-[400px] w-[250px] z-50 flex-col justify-center items-center md:hidden"
-        >
+      >
         <ul class="h-full w-full text-center flex flex-col justify-evenly">
-          <li class=" pb-4 pt-4">
+          <li class="pb-4 pt-4">
             <a href="#home" class="hover:text-secondary font-bold">Kezdőlap</a>
           </li>
-          <li class=" pb-4 pt-4 productsScroll2">
-            <a href="#aboutus" class="hover:text-secondary font-bold">Termékek</a>
+          <li class="pb-4 pt-4 productsScroll2">
+            <a href="#aboutus" class="hover:text-secondary font-bold"
+              >Termékek</a
+            >
           </li>
-          <li class=" pb-4 pt-4 emailScroll2">
-            <a href="#aboutus" class="hover:text-secondary font-bold">Írj nekünk</a>
-          </li>
-          <li  class=" pb-4 pt-4 contactScroll2">
+          <li class="pb-4 pt-4 contactScroll2">
             <a href="#results" class="hover:text-secondary font-bold"
               >Kapcsolat</a
+            >
+          </li>
+          <li class="pb-4 pt-4 emailScroll2">
+            <a href="#aboutus" class="hover:text-secondary font-bold"
+              >Írj nekünk</a
             >
           </li>
         </ul>
@@ -178,7 +181,6 @@
       </h1>
     </section>
     <!-- Mobile menu -->
-
 
     <section>
       <div>
@@ -249,7 +251,7 @@
             </div>
           </ul>
         </div>
-        <section class="contact p-6 pt-24 bg-white ">
+        <section class="contact p-6 pt-24 bg-white">
           <h1 class="contactPage text-primary text-3xl my-6 text-center">
             Kik vagyunk mi
           </h1>
@@ -272,7 +274,9 @@
                 <div class="flex justify-center">
                   <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
                 </div>
-                <h2 class="items-center"><a href="tel:+36301234567">+36-30/123-4567</a></h2>
+                <h2 class="items-center">
+                  <a href="tel:+36301234567">+36-30/123-4567</a>
+                </h2>
               </div>
               <div>
                 <div class="w-full md:flex md:justify-evenly">
@@ -283,7 +287,11 @@
                       alt=""
                     />
                   </div>
-                  <h2 class="items-center"><a href="mailto:valami@granit-mill.hu">valami@granit-mill.hu</a></h2>
+                  <h2 class="items-center">
+                    <a href="mailto:valami@granit-mill.hu"
+                      >valami@granit-mill.hu</a
+                    >
+                  </h2>
                 </div>
               </div>
             </div>
@@ -302,7 +310,9 @@
                 <div class="flex justify-center">
                   <img src="./assets/cellphone2.svg" class="w-[30px]" alt="" />
                 </div>
-                <h2 class="items-center"><a href="tel:+36301234567">+36-30/123-4567</a></h2>
+                <h2 class="items-center">
+                  <a href="tel:+36301234567">+36-30/123-4567</a>
+                </h2>
               </div>
               <div>
                 <div class="w-full md:flex md:justify-evenly">
@@ -313,7 +323,11 @@
                       alt=""
                     />
                   </div>
-                  <h2 class="items-center"><a href="mailto:valami@granit-mill.hu">valami@granit-mill.hu</a></h2>
+                  <h2 class="items-center">
+                    <a href="mailto:valami@granit-mill.hu"
+                      >valami@granit-mill.hu</a
+                    >
+                  </h2>
                 </div>
               </div>
             </div>
@@ -323,7 +337,6 @@
               alt="A Gránit-mill szervizese, Koncz Edvárd"
             />
           </div>
-
         </section>
         <section class="email body-font relative bg-white text-gray-400">
           <div class="container mx-auto px-5 py-24">
@@ -331,13 +344,15 @@
               <h1
                 class="title-font mb-4 text-2xl font-medium text-primary sm:text-3xl"
               >
-              Írj nekünk
+                Írj nekünk
               </h1>
-              <p class="mx-auto text-base text-primary leading-relaxed lg:w-2/3">
-                Bármi kérdésed van,  írj bátran
+              <p
+                class="mx-auto text-base text-primary leading-relaxed lg:w-2/3"
+              >
+                Bármi kérdésed van, írj bátran
               </p>
             </div>
-    
+
             <div class="mx-auto md:w-2/3 lg:w-1/2">
               <div class="-m-2 md:flex flex-wrap">
                 <!-- form -->
@@ -360,12 +375,13 @@
                       <option value="Lézervágó gépek" class="text-gray-700">
                         Extruderek
                       </option>
-                      
+
                       <option value="Lézervágó gépek" class="text-gray-700">
                         Egyéb gépek
                       </option>
-                      
-                      <option value="Szerviz" class="text-gray-700">Szerviz</option>
+                      <option value="Szerviz" class="text-gray-700">
+                        Szerviz
+                      </option>
                     </select>
                   </div>
                 </div>
@@ -397,7 +413,7 @@
                     />
                     <label
                       for="tel"
-                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
                       >Telefonszám</label
                     >
                   </div>
@@ -411,7 +427,7 @@
                     />
                     <label
                       for="email"
-                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
                       >Email</label
                     >
                   </div>
@@ -425,7 +441,7 @@
                     />
                     <label
                       for="company"
-                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
                       >Cégnév (nem kötelező)</label
                     >
                   </div>
@@ -440,7 +456,7 @@
                     ></textarea>
                     <label
                       for="message"
-                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
+                      class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-200 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-gray-700"
                       >Üzenet</label
                     >
                   </div>
@@ -482,9 +498,18 @@
             </div>
           </div>
         </section>
-        <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.3486109107093!2d20.268522975828336!3d46.639629554250426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47440bc18826c7af%3A0xd79e7a5e8816400a!2sGr%C3%A1nit-Mill%20Kft.!5e0!3m2!1shu!2shu!4v1724424874417!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          class="w-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.3486109107093!2d20.268522975828336!3d46.639629554250426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47440bc18826c7af%3A0xd79e7a5e8816400a!2sGr%C3%A1nit-Mill%20Kft.!5e0!3m2!1shu!2shu!4v1724424874417!5m2!1shu!2shu"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <footer class="py-14 bg-primary text-white">
-          <div  id="contact">
+          <div id="contact">
             <h3 class="text-center text-3xl">Gránit-Mill Kft.</h3>
             <div
               id="contact"
@@ -534,20 +559,17 @@
       </div>
     </section>
 
-
-    
-
     <script src="../script/script.js"></script>
     <script src="../script/emailScript.js"></script>
     <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init('GEE2KebGzoAF9pDIG');
-    })();
-  </script>
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('GEE2KebGzoAF9pDIG');
+      })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

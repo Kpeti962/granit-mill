@@ -57,7 +57,7 @@ hamburgerButton.addEventListener('click', () => {
   overlay.classList.toggle('visible');
 });
 overlay.addEventListener('click', function () {
-  
+
   mobileMenu.classList.toggle('hidden');
   mobileMenu.classList.remove('open');
   overlay.classList.remove('visible');

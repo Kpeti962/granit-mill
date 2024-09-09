@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="../../src/output.css" rel="stylesheet" />
-
+    <link rel="icon" type="image/x-icon" href="../assets/imgs/logo-fav.png" />
     <title>Extruderek</title>
     <style>
       .no-hover-effect {
@@ -19,23 +19,23 @@
         transition: ease-in-out 0.8s;
       }
       .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
-  z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
-  display: none; /* Alapértelmezett állapotban rejtett */
-}
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Szürke, átlátszó háttér */
+        z-index: 40; /* Legyen alatta a menünek (z-index: 50) */
+        display: none; /* Alapértelmezett állapotban rejtett */
+      }
 
-.mobile-menu.open {
-  display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
-}
+      .mobile-menu.open {
+        display: flex; /* Mobil menü megjelenítése, amikor nyitva van */
+      }
 
-.overlay.visible {
-  display: block; /* Overlay megjelenítése */
-}
+      .overlay.visible {
+        display: block; /* Overlay megjelenítése */
+      }
     </style>
   </head>
   <body class="page">
@@ -94,7 +94,7 @@
               >
             </li>
             <li>
-              <a href="./extruderek.html" class="text-secondary  font-bold"
+              <a href="./extruderek.html" class="text-secondary font-bold"
                 >Extruderek</a
               >
             </li>
@@ -115,27 +115,29 @@
         class="mobile-menu hidden fixed top-1/2 -translate-y-1/2 bg-gray-200 m-auto h-[400px] w-[250px] z-50 flex-col justify-center items-center md:hidden"
       >
         <ul class="h-full w-full text-center flex flex-col justify-evenly">
-          <li class=" pb-4 pt-4">
+          <li class="pb-4 pt-4">
             <a href="../index.html" class="hover:text-secondary font-bold"
               >Kezdőlap</a
             >
           </li>
-          <li class=" pb-4 pt-4">
-            <a href="./granulalogepek.html" class="hover:text-secondary font-bold"
+          <li class="pb-4 pt-4">
+            <a
+              href="./granulalogepek.html"
+              class="hover:text-secondary font-bold"
               >Granulálógépek</a
             >
           </li>
-          <li class=" pb-4 pt-4">
+          <li class="pb-4 pt-4">
             <a href="./keverogepek.html" class="hover:text-secondary font-bold"
               >Keverőgépek</a
             >
           </li>
-          <li class=" pb-4 pt-4">
+          <li class="pb-4 pt-4">
             <a href="./extruderek.html" class="text-secondary font-bold"
               >Extruderek</a
             >
           </li>
-          <li class=" pb-4 pt-4">
+          <li class="pb-4 pt-4">
             <a href="./egyeb-gepek.html" class="hover:text-secondary font-bold"
               >Egyéb gépek</a
             >
